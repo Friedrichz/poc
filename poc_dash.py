@@ -66,9 +66,9 @@ st.markdown(
     &rarr; For this example, I'm using a simplified version of **Hedgeyes GIP model** to classify historical timeseries into one of the 4 quadrants. These regimes are determined by two factors only, namely the rate of change in QoQ GDP and QoQ CPI.
     I'm then using these regimes to estimate regime-conditional return distributions for each asset, essentially making expected returns for each asset dependent on the (expected) regime.
 
-    - A priori **portfolio constraints**, for example Equities exposure > 10 % at all times, Gold never < 40 %
+    - A priori **portfolio constraints**, for example Equities exposure > 10 % at all times, Gold never < 40 %, etc. These might come from our risk management framework which dictates certain max/min exposures or anything similar.
     
-    &rarr; In this case, I'm ommitting any additional portfolio constraints views
+    &rarr; In this case, I'm ommitting any additional portfolio constraints
 
     #### 2. Construct posterior asset distributions ####
     This is where we combine prior estimates of returns (e.g. market implied returns) with views on certain assets, to produce a **posterior** estimate of expected returns.
