@@ -17,7 +17,7 @@ proxy_assets = dict(
 )
 
 # Load data & format
-data_df = pd.read_csv('.\data\poc_data.csv')
+data_df = pd.read_csv('poc_data.csv')
 data_df.columns = ['Date'] + data_df.columns.tolist()[1:]
 data_df['Date'] = pd.to_datetime(data_df.Date)
 # print(data_df.shape)
