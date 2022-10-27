@@ -1,4 +1,3 @@
-from sys import stdout
 import streamlit as st
 from PIL import Image
 
