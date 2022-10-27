@@ -1,0 +1,39 @@
+
+
+POC -> High level overview of methodology 
+_______________________________________________________________________________________________
+
+In each step there is an extensive amount of detail we're omitting making results meaningless
+
+
+
+
+_______________________________________________________________________________________________
+
+AREAS
+_______________________________________________________________________________________________
+
+> Asset proxies
+
+- not enough data on individual hedge fund manager returns => need to use proxies
+
+
+
+
+
+> Return estimation asset classes
+
+- N data size for hist returns
+monhtly returns for 2008 - 2022 period 
+only this many observations per regime (!)
+Quad 2    60
+Quad 1    54
+Quad 3    47
+Quad 4    13
+
+- Updating priors w/ discretionary views
+How to translate asset class views into mathematical model?
+Bayesian updating (see Meucci)
+
+
+
