@@ -4,12 +4,12 @@ from PIL import Image
 import poc_model_script as ms
 #import assets, ret_df, li_ss, fig_rets_dic, fillcolors_regimes, regime_li, add_regimes, port_rets
 
-bslogo = Image.open('./assets/logo-brightside.png')
+bslogo = Image.open('logo-brightside.png')
 
 # Page configs
 st.set_page_config(
     page_title="BS Portfolio Model",
-    page_icon="🧊",
+    #page_icon="",
     # layout="wide",
 )
 
@@ -24,7 +24,7 @@ with header_col2:
     st.title('Portfolio Allocation Model Proof of Concept')
 
 # Conceptual walkthrough
-conceptimg = Image.open('./assets/conceptual_flowchart_v2-grey.png')
+conceptimg = Image.open('conceptual_flowchart_v2-grey.png')
 
 st.empty()
 
