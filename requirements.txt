@@ -2,7 +2,6 @@ altair==4.2.0
 appdirs==1.4.4
 backports.zoneinfo==0.2.1
 blinker==1.5
-blpapi==3.17.1
 bt==0.2.9
 cachetools==5.2.0
 certifi==2022.9.24
