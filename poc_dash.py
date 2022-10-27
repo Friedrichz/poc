@@ -263,13 +263,12 @@ st.markdown(
     1. **Proxy returns**: Since we're allocating to funds with limited track records and non-trivial risk-return profiles we will either need to find proxies or replicate their return characteristics (think of long vol)
     2. **Sample size**: As you can see I've included a table with number of observations above for each regime. As an example, 13 data points for Quad4 regime make any statistic/inference about dynamics within that regime superflous given statistical insignificance. In a similar vein, a hedge fund with a 3yr track record of monthly returns provides a very limited basis to understand how it will react in different regimes. Thus, we might have to resort to simulating risk profiles.
 
-    -Translating discretionary views into a language the mathematical model can understand is also not straightforward but key to making forward-looking allocations. 
+    - Translating discretionary views into a language the mathematical model can understand is also not straightforward but key to making forward-looking allocations. 
     (Last 10yrs of market data will tell us nothing about next 10yrs) This is were our true edge comes in.
 
 
     #### Ad 3. Optimization ####
-    - Mathematical optimization is a very fragile undertaking so understanding objective functions and parameter sensibilities is paramount. 
-    Clearly, we will not want to stick to a linear model like MVO, particularly in the light of the highly non-liner payoff profiles that we want in our exposure.
+    - Mathematical optimization is a very fragile undertaking so understanding objective functions and parameter sensibilities is paramount. Clearly, we will not want to stick to a linear model like MVO, particularly in the light of the highly non-liner payoff profiles that we want in our exposure.
     This will mean iterating through a large amount of objective functions, stress testing results against a series of scenarios, and thinking in bounds instead of point-estimates.
 
 
