@@ -40,9 +40,9 @@ st.markdown(
 
     This presents a proof of concept for how to systematize parts of our portfolio allocation methodology going forward
 
-    The intent is to lay out a concise framework on how to quantitatively process both empirical data and discretionary views into a portfolio model that ultimately provides us with optimal portfolio weights. 
+    The intent is to lay out a concise framework on how to quantitatively process both empirical data and discretionary views into a portfolio model that ultimately provides us with a mathematical benchmark for optimal allocation weights. 
 
-    This model is kept intentionally simple. Each of these steps contains a set of non-trivial assumptions that that would need to be revisited in detail were we to follow through on this approach (see section at end).
+    This model is kept intentionally simple. Each of these steps contains a set of non-trivial assumptions that would need to be revisited in detail if we follow through on this approach (see section at end).
     """
 )
 
@@ -68,7 +68,7 @@ st.markdown(
 
     - A priori **portfolio constraints**, for example Equities exposure > 10 % at all times, Gold never < 40 %
     
-    &rarr; In this case, I'm ommitting any additional discretionary views.
+    &rarr; In this case, I'm ommitting any additional portfolio constraints views
 
     #### 2. Construct posterior asset distributions ####
     This is where we combine prior estimates of returns (e.g. market implied returns) with views on certain assets, to produce a **posterior** estimate of expected returns.
@@ -81,7 +81,7 @@ st.markdown(
 
     This results in **portfolio weights** optimized for the selected objective.
     
-    &rarr; Here we're solving for a max sharpe ratio
+    &rarr; Here we're solving for a max sharpe ratio, i.e. mean-variance optimization (MVO)
 
     #### 4. Backtesting ####
     Finally, the weights get tested both against historical out of sample or simulated forward looking data (Monte Carlo).
@@ -260,18 +260,17 @@ st.markdown(
 
     #### Ad 1. Model Inputs ####
     - Two major challenges with empirical data
-    * 1. **Proxy returns**: Since we're allocating to funds with limited track records and non-trivial risk-return profiles we will either need to find proxies or replicate their return characteristics (think of long vol)
-    * 2. **Sample size**: As you can see I've included a table with number of observations above for each regime. As an example, 13 data points for Quad4 regime make any statistic/inference about dynamics within that regime superflous given statistical insignificance. 
-    In a similar vein, a hedge fund with a 3yr track record of monthly returns provides a very limited basis to understand how it will react in different regimes. Thus, we might have to resort to simulating risk profiles.
+    1. **Proxy returns**: Since we're allocating to funds with limited track records and non-trivial risk-return profiles we will either need to find proxies or replicate their return characteristics (think of long vol)
+    2. **Sample size**: As you can see I've included a table with number of observations above for each regime. As an example, 13 data points for Quad4 regime make any statistic/inference about dynamics within that regime superflous given statistical insignificance. In a similar vein, a hedge fund with a 3yr track record of monthly returns provides a very limited basis to understand how it will react in different regimes. Thus, we might have to resort to simulating risk profiles.
 
-    - Translating discretionary views into mathematical syntax is also not straightforward but key to making forward-looking allocations. 
+    -Translating discretionary views into a language the mathematical model can understand is also not straightforward but key to making forward-looking allocations. 
     (Last 10yrs of market data will tell us nothing about next 10yrs) This is were our true edge comes in.
 
 
     #### Ad 3. Optimization ####
-    - Mathematical optimization is a very fragile undertaking so understanding the objective function and parameter sensibility is paramount. 
-    Clearly, we will not want to stick to a linear model like MVO, particularly in the light of the highly non-liner payoff profiles we're looking to be exposed to.
-    This will mean iterating through a large amount of objective functions, stress testing results against a series of scenarios, etc.
+    - Mathematical optimization is a very fragile undertaking so understanding objective functions and parameter sensibilities is paramount. 
+    Clearly, we will not want to stick to a linear model like MVO, particularly in the light of the highly non-liner payoff profiles that we want in our exposure.
+    This will mean iterating through a large amount of objective functions, stress testing results against a series of scenarios, and thinking in bounds instead of point-estimates.
 
 
     """
