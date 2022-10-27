@@ -272,5 +272,7 @@ st.markdown(
     This will mean iterating through a large amount of objective functions, stress testing results against a series of scenarios, and thinking in bounds instead of point-estimates.
 
 
+    Let's discuss!
+
     """
 )
