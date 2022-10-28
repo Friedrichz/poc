@@ -143,6 +143,7 @@ with model_inputs_cols[0]:
 with model_inputs_cols[0]:
     st.subheader('GIP Model: Inflation & GDP')
     st.plotly_chart(fig_gip_model)
+    st.caption('QUAD 1 = GREEN, QUAD 2 = BLUE, QUAD 3 = YELLOW, QUAD 4 = RED')
 
 # Describe return tables (whole data)
 hist_returns_cols1, hist_returns_cols2 = st.columns([3, 1], gap='medium')
@@ -239,6 +240,7 @@ fig_cret.update_layout(height=500, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="
                         )
 
 st.plotly_chart(fig_cret, use_container_width=True)
+st.caption('QUAD 1 = GREEN, QUAD 2 = BLUE, QUAD 3 = YELLOW, QUAD 4 = RED')
 
 st.subheader('Weights')
 fig_wbtest = ms.ts_weights.plot()
@@ -249,6 +251,7 @@ fig_wbtest.update_layout(height=300, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor
                         )
 
 st.plotly_chart(fig_wbtest, use_container_width=True)
+st.caption('QUAD 1 = GREEN, QUAD 2 = BLUE, QUAD 3 = YELLOW, QUAD 4 = RED')
 
 
 # Tearsheet
