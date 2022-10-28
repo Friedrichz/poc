@@ -43,6 +43,9 @@ st.markdown(
     The intent is to lay out a concise framework on how to quantitatively process both empirical data and discretionary views into a portfolio model that ultimately provides us with a mathematical benchmark for optimal allocation weights. 
 
     This model is kept intentionally simple. Each of these steps contains a set of non-trivial assumptions that would need to be revisited in detail if we follow through on this approach (see section at end).
+    
+    **In short, below I'm asking and giving a naive answer to the question:**
+**Given past asset price realizations across different regimes (quads), what portfolio weights *would have* resulted in the optimal return/risk ratio during each regime.**
     """
 )
 
